@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Instagram — Вход</title>
+    <link rel="stylesheet" href="instagram.css"/>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="left">
+        <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="icon" />
+
+        <h1 id="main-text">
+            Посмотрите, какими<br>
+            моментами из жизни<br>
+            поделились ваши <span class="gradient">близкие друзья</span>.
+        </h1>
+
+        <div class="photos">
+            <img src="C:\Users\Ekate\Downloads\image-removebg-preview.png" class="center" alt="png">
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="login-box">
+            <h2 class="login-title" id="login-title">Войти в Instagram</h2>
+
+            <input type="text" id="input-user" placeholder="Имя пользователя, номер мобильного телефона или электронная почта">
+            <input type="password" id="input-pass" placeholder="Пароль">
+
+            <button class="login-btn" id="login-btn">Войти</button>
+
+            <a href="#" class="forgot" id="forgot-link">Забыли пароль?</a>
+
+            <div class="divider"></div>
+
+            <button class="facebook-btn" id="fb-btn">
+                Войти через Facebook
+            </button>
+
+            <button class="create-btn" id="create-btn">
+                Создать новый аккаунт
+            </button>
+
+            <div class="meta-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/800px-Meta_Platforms_Inc._logo.svg.png" alt="Meta" style="height: 12px; opacity: 0.5;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="links">
+        <a>Meta</a><a>Информация</a><a>Блог</a><a>Вакансии</a><a>Помощь</a><a>API</a><a>Конфиденциальность</a><a>Условия</a><a>Места</a><a>Instagram Lite</a><a>Meta AI</a><a>Threads</a><a>Meta Verified</a>
+    </div>
+
+    <div class="footer-bottom">
+        <select name="language" id="language-select" class="lang-select">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+        </select>
+        <small id="copyright">© 2026 Instagram from Meta</small>
+    </div>
+</footer>
+
+<script>
+    const translations = {
+        en: {
+            mainText: "See what moments<br>from life your<br><span class='gradient'>close friends</span> shared.",
+            title: "Log in to Instagram",
+            user: "Phone number, username, or email",
+            pass: "Password",
+            login: "Log In",
+            forgot: "Forgot password?",
+            fb: "Log in with Facebook",
+            create: "Create new account",
+            copy: "© 2026 Instagram from Meta"
+        },
+        ru: {
+            mainText: "Посмотрите, какими<br>моментами из жизни<br>поделились ваши <span class='gradient'>близкие друзья</span>.",
+            title: "Войти в Instagram",
+            user: "Имя пользователя, номер мобильного телефона или электронная почта",
+            pass: "Пароль",
+            login: "Войти",
+            forgot: "Забыли пароль?",
+            fb: "Войти через Facebook",
+            create: "Создать новый аккаунт",
+            copy: "© 2026 Instagram from Meta"
+        }
+    };
+
+    const select = document.getElementById('language-select');
+    select.addEventListener('change', (e) => {
+        const lang = e.target.value;
+        const t = translations[lang];  
+        document.getElementById('main-text').innerHTML = t.mainText;
+        document.getElementById('login-title').textContent = t.title;
+        document.getElementById('input-user').placeholder = t.user;
+        document.getElementById('input-pass').placeholder = t.pass;
+        document.getElementById('login-btn').textContent = t.login;
+        document.getElementById('forgot-link').textContent = t.forgot;
+        document.getElementById('fb-btn').textContent = t.fb;
+        document.getElementById('create-btn').textContent = t.create;
+        document.getElementById('copyright').textContent = t.copy;
+    });
+</script>
+
+</body>
+</html>
