@@ -7,6 +7,8 @@ def main():
     for a in animals:
         print(a)
         print(a.info())
+        if hasattr(a, "action"):
+            print(a.action())
         print(a.speak())
         print()
 if __name__ == "__main__":
