@@ -4,7 +4,7 @@ class Animal:
         self.age = age
         self.color = color
     def speak(self):
-        return "Some animal sound"
+        return "Animal sound"
     def info(self):
         return f"{self.name} is {self.age} years old"
     def __str__(self):
@@ -28,6 +28,6 @@ class Cat(Animal):
     def speak(self):
         return "Meow!"
     def climb(self):
-        return f"{self.name} is climbing a tree!"
+        return f"{self.name} is drinking milk!"
     def __str__(self):
         return f"Cat(name={self.name}, age={self.age}, color={self.color}, lives={self.lives})"
