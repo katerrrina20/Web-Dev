@@ -4,8 +4,8 @@ from models import Animal, Dog, Cat
 def main():
 
     animal = Animal("GenericAnimal", 5, "gray")
-    dog = Dog("Buddy", 3, "brown", "Labrador")
-    cat = Cat("Whiskers", 2, "white", 9)
+    dog = Dog("Max", 3, "brown", "Labrador")
+    cat = Cat("Barsik", 2, "white", 9)
 
     animals = [animal, dog, cat]
 
